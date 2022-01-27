@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="mobile/css/m-style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome/css/fontawesome.min.css">
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/img/icon.png">
+
+    <title>Narobil</title>
+</head>
+
+<!-- loading -->
+<div id="loader" class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+
+<body onload="loading()" style="background-color: #fff;">
+
+    <!-- main content -->
+    <main id="content" style="display: none;">
+
+        <!-- desktop header -->
+        <div class="container-fluid text-center sukses desktop">
+            <img src="assets/img/ic-pembayaran-sukses.png" alt="Sukses">
+            <p>Pembayaran Sukses</p>
+            <p>Terimakasih telah melakukan pembayaran</p>
+        </div>
+        <!-- mobile header -->
+        <div class="container-fluid text-center sukses mobile">
+            <img width="100px" src="assets/img/ic-pembayaran-sukses.png" alt="Sukses">
+            <p>Pembayaran Sukses</p>
+            <p>Terimakasih telah melakukan pembayaran</p>
+        </div>
+        <!-- header -->
+
+        <!-- desktop-version -->
+        <section id="desktop-ver" class="container mt-4">
+            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                <p class="m-0 text-uppercase">Status</p>
+                <p class="m-0 text-uppercase" style="color: #333;">Proses</p>
+            </div>
+            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                <p class="m-0 text-uppercase">No Invoice</p>
+                <p class="m-0 text-uppercase" style="color: #333;">5009747062</p>
+            </div>
+            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                <p class="m-0 text-uppercase">NO TRANSAKSI</p>
+                <p class="m-0 text-uppercase" style="color: #333;">2020051101005198600571946</p>
+            </div>
+            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                <p class="m-0 text-uppercase">Tagihan</p>
+                <p class="m-0 text-capitalize" style="color: #333;">Rp 12.000.000</p>
+            </div>
+            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                <p class="m-0 text-uppercase">Biaya Admin</p>
+                <p class="m-0 text-capitalize" style="color: #333;">Rp 3.500</p>
+            </div>
+            <hr class="mt-0 dotted">
+            <div class="row m-0 justify-content-between">
+                <p class="text-uppercase">Total Pembayaran</p>
+                <p class="text-capitalize total-pembayaran" style="color: #4db8c4; font-weight: 600;">Rp 12.003.500</p>
+            </div>
+        </section>
+        <!-- desktop-version -->
+
+        <!-- mobile-version -->
+        <div id="mobile-ver" class="container container-data mt-4">
+            <div class="row mx-0 mb-2 justify-content-between">
+                <p class="text-uppercase m-0">Status</p>
+                <p class="text-uppercase m-0" style="color: #333;">Proses</p>
+            </div>
+            <div class="row mx-0 mb-2 justify-content-between">
+                <p class="text-uppercase m-0">No Invoice</p>
+                <p class="text-uppercase m-0" style="color: #333;">5009747062</p>
+            </div>
+            <div class="row m-0 justify-content-between">
+                <p class="text-uppercase m-0">NO TRANSAKSI</p>
+                <p class="text-uppercase m-0" style="color: #333;">2020051101005198600571946</p>
+            </div>
+            <hr>
+            <div class="row mx-0 mb-2 justify-content-between">
+                <p class="text-uppercase m-0">Tagihan</p>
+                <p class="text-capitalize m-0" style="color: #333;">Rp 12.000.000</p>
+            </div>
+            <div class="row m-0 justify-content-between">
+                <p class="text-uppercase m-0">Biaya Admin</p>
+                <p class="text-capitalize m-0" style="color: #333;">Rp 3.500</p>
+            </div>
+            <hr class="dotted">
+            <div class="row m-0 justify-content-between">
+                <p class="text-uppercase m-0">Total Pembayaran</p>
+                <p class="text-capitalize total-pembayaran m-0" style="color: #4db8c4; font-weight: 600;">Rp 12.003.500
+                </p>
+            </div>
+            <div class="row min-vw-100">
+                <hr class="w-100 my-3" style="border-top: 10px solid #e8e8e8;">
+            </div>
+        </div>
+        <!-- mobile-version -->
+
+    </main>
+    <!--end main content -->
+
+
+    <!-- footer -->
+    <footer id="footer" style="display: none; border-top: 1px solid #eee;">
+        <div class="container">
+            <div class="row m-0 justify-content-between">
+                <p class="mb-0">Copyright © 2020</p>
+                <p class="mb-0">PT Jatelindo Perkasa Abadi</p>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer-mobile" style="display: none;">
+        <p>Copyright © 2020 - Jatelindo Perkasa Abadi</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // hide footer
+        setTimeout(function () {
+            if (width <= 1024) {
+                $("#footer").hide();
+                $(".footer-mobile").show();
+            } else {
+                $(".footer-mobile").hide();
+                $("#footer").show();
+            }
+        }, 550);
+    </script>
+
+</body>
+
+</html>

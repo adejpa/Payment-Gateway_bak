@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="mobile/css/m-style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome/css/fontawesome.min.css">
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/img/icon.png">
+
+    <title>Narobil</title>
+</head>
+
+<!-- loading -->
+<div id="loader" class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+
+<body class="kartu-kredit" onload="loading()">
+
+    <!-- main content -->
+    <main id="content" class="wrapper" style="display: none;">
+        <!-- navbar desktop -->
+        <nav id="nav-desktop-ver" class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="metode-pembayaran.html"><img src="assets/img/logo-nav.png"
+                        alt="Narobil"></a>
+            </div>
+        </nav>
+        <!-- navbar mobile -->
+        <nav id="nav-mobile-ver" class="navbar">
+            <a class="navbar-brand" href="metode-pembayaran.html"><img src="assets/img/logo-nav.png" alt="Narobil"
+                    height="32px"></a>
+        </nav>
+        <!-- end navbar -->
+
+        <!-- desktop version -->
+        <section id="desktop-ver" class="container mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row m-0 justify-content-between">
+                        <h3 class="judul">Kartu Kredit</h3>
+                        <span>
+                            <img class="mr-1" src="assets/img/visa.png" alt="Visa">
+                            <img class="mr-1" src="assets/img/master-card.png" alt="Master Card">
+                            <img src="assets/img/jcb.png" alt="JCB">
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- card transfer -->
+                    <div class="card card-transfer">
+                        <div class="card-header waktu-bayar py-0">
+                            <div class="row m-0 justify-content-between">
+                                <p class="mb-0">Selesaikan pembayaran dalam waktu</p>
+                                <!-- countdown timer -->
+                                <div class="timer"><span class="remainingTime">24 : 00 : 00</span></div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="judul">Kurban Berkah Bersama Narobil</h3>
+                            <h6 class="sub-judul mb-4">Organisasi <span>Baznas</span></h6>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">NAMA</p>
+                                <p class="m-0" style="color: #333;">Sanbox Narobil</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">NO. KARTU</p>
+                                <p class="m-0" style="color: #333;">0012345678912340</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">KADALUARSA</p>
+                                <p class="m-0" style="color: #333;">08/24-123</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 16px;max-height: 20px;">
+                                <p class="id-bayar m-0 align-self-center">Id Bayar</p>
+                                <div class="copy">
+                                    <!-- Target -->
+                                    <input id="id-tagihan1" value="897087082258969616" readonly><button
+                                        class="btn btn-salin" data-clipboard-target="#id-tagihan1"
+                                        style="line-height: 0;">
+                                        <img src="assets/img/ic-salin.png" alt="Copy to clipboard">
+                                    </button>
+                                    <span class="tooltiptext">Salin ID</span>
+                                </div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">Tagihan</p>
+                                <p class="m-0 text-capitalize" style="color: #333;">Rp 12.000.000</p>
+                            </div>
+                            <div class="row m-0 justify-content-between">
+                                <p>Biaya Admin</p>
+                                <p class="text-capitalize" style="color: #333;">Rp 3.500</p>
+                            </div>
+                            <hr class="dotted mt-0">
+                            <div class="row m-0 justify-content-between">
+                                <p class="m-0">Total Pembayaran</p>
+                                <p class="m-0 text-capitalize">Rp 12.003.500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card transfer -->
+                    <div class="d-flex justify-content-end mt-3">
+                        <a href="index.html" class="btn btn-light btn-batal">Batal</a>
+                        <button class="btn btn-info btn-submit">Bayar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- desktop version -->
+
+        <!-- mobile version -->
+        <div class="container mt-4 mobile">
+            <div class="row m-0 justify-content-between">
+                <h3 class="mb-0 judul" style="font-size: 16px;">Kartu Kredit</h3>
+                <span>
+                    <img class="mr-1" src="assets/img/visa.png" alt="Visa">
+                    <img class="mr-1" src="assets/img/master-card.png" alt="Master Card">
+                    <img src="assets/img/jcb.png" alt="JCB">
+                </span>
+            </div>
+        </div>
+        <div class="row waktu-bayar justify-content-between mobile">
+            <p class="mb-0">Selesaikan pembayaran dalam waktu</p>
+            <!-- countdown timer -->
+            <div class="timer"><span class="remainingTime">24 : 00 : 00</span></div>
+        </div>
+
+        <section id="mobile-ver" class="container container-data">
+            <h3 class="judul mb-2">Kurban Berkah Bersama Narobil</h3>
+            <div class="row mx-0 mb-4 justify-content-between align-items-center">
+                <h6 class="sub-judul m-0 d-flex">Organisasi <span
+                        class="d-inline-block ml-1 text-truncate organisasi">Lorem
+                        ipsum
+                        dolor, sit
+                        amet consectetur adipisicing elit. Praesentium aliquid, quas debitis laboriosam deserunt et eum
+                        cum ullam
+                        quidem optio deleniti velit repudiandae quos molestiae laborum vel cupiditate aut
+                        ducimus.</span></h6>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">Nama</p>
+                <p class="m-0" style="color: #333;">AHMAD RIDWAN</p>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">NO. KARTU</p>
+                <p class="m-0" style="color: #333;">4213-1311-0000-0000</p>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">KADALUARSA</p>
+                <p class="m-0" style="color: #333;">08/24-123</p>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">ID BAYAR</p>
+                <p class="m-0" style="color: #333;">897087082258969616</p>
+            </div>
+            <hr>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">TAGIHAN</p>
+                <p class="m-0" style="color: #333;">Rp 12.000.000</p>
+            </div>
+            <div class="row mx-0 justify-content-between">
+                <p class="m-0 text-uppercase">Biaya Admin</p>
+                <p class="m-0" style="color: #333;">Rp 3.500</p>
+            </div>
+            <hr class="dotted">
+            <div class="row m-0 justify-content-between">
+                <p class="text-uppercase m-0">Total Pembayaran</p>
+                <p class="m-0" style="color: #333; font-weight: 600;">Rp 12.003.500</p>
+            </div>
+            <div class="box-btn">
+                <button type="submit" class="btn btn-info btn-submit">Bayar</button>
+            </div>
+        </section>
+        <!-- mobile version -->
+    </main>
+    <!--end main content -->
+
+    <!-- footer -->
+    <footer id="footer" style="display: none;" class="position-relative mt-4">
+        <div class="container">
+            <div class="row m-0 justify-content-between">
+                <p class="mb-0">Copyright © 2020</p>
+                <p class="mb-0">PT Jatelindo Perkasa Abadi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Clipboard -->
+    <script src="plugins/clipboard/js/clipboard.min.js"></script>
+    <script src="assets/js/bayar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="mobile/css/m-style.css">
+    <link href="plugins/font-disc/text-security-disc.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome/css/fontawesome.min.css">
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/img/icon.png">
+
+    <title>Narobil</title>
+</head>
+
+<!-- loading -->
+<div id="loader" class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+
+<body onload="loading()">
+
+    <!-- main content -->
+    <main id="content" class="wrapper" style="display: none;">
+        <!-- navbar desktop -->
+        <nav id="nav-desktop-ver" class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="metode-pembayaran.html"><img src="assets/img/logo-nav.png"
+                        alt="Narobil"></a>
+            </div>
+        </nav>
+        <!-- navbar mobile -->
+        <nav id="nav-mobile-ver" class="navbar">
+            <a class="navbar-brand" href="metode-pembayaran.html"><img src="assets/img/logo-nav.png" alt="Narobil"
+                    height="32px"></a>
+        </nav>
+        <!-- end navbar -->
+
+        <!-- desktop version -->
+        <section id="desktop-ver" class="container mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row m-0 justify-content-between">
+                        <h3 class="judul">Kartu Debit</h3>
+                        <img src="assets/img/kartu-debit.png" alt="Kartu Debit">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- card transfer -->
+                    <div class="card card-transfer">
+                        <div class="card-header waktu-bayar py-0">
+                            <div class="row m-0 justify-content-between">
+                                <p class="mb-0">Selesaikan pembayaran dalam waktu</p>
+                                <!-- countdown timer -->
+                                <div class="timer"><span class="remainingTime">24 : 00 : 00</span></div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="judul">Kurban Berkah Bersama Narobil</h3>
+                            <h6 class="sub-judul mb-4">Organisasi <span>Baznas</span></h6>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">BANK</p>
+                                <p class="m-0" style="color: #333;">Mandiri</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">NAMA</p>
+                                <p class="m-0" style="color: #333;">Sanbox Narobil</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">NO. REKENING</p>
+                                <p class="m-0" style="color: #333;"><span
+                                        class="kode-bank-trf">008</span>-12345678912340</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 16px;max-height: 20px;">
+                                <p class="id-bayar m-0 align-self-center">Id Bayar</p>
+                                <div class="copy">
+                                    <!-- Target -->
+                                    <input id="id-tagihan1" value="897087082258969616" readonly><button
+                                        class="btn btn-salin pb-0" data-clipboard-target="#id-tagihan1"
+                                        style="line-height: 0;">
+                                        <img src="assets/img/ic-salin.png" alt="Copy to clipboard">
+                                    </button>
+                                    <span class="tooltiptext">Salin ID</span>
+                                </div>
+                            </div>
+                            <hr class="mt-0">
+                            <div class="row mx-0 justify-content-between" style="margin-bottom: 12px;">
+                                <p class="m-0">Tagihan</p>
+                                <p class="m-0 text-capitalize" style="color: #333;">Rp 12.000.000</p>
+                            </div>
+                            <div class="row m-0 justify-content-between">
+                                <p>Biaya Admin</p>
+                                <p class="text-capitalize" style="color: #333;">Rp 3.500</p>
+                            </div>
+                            <hr class="dotted mt-0">
+                            <div class="row m-0 justify-content-between">
+                                <p class="m-0">Total Pembayaran</p>
+                                <p class="m-0 text-capitalize">Rp 12.003.500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card transfer -->
+                    <div class="d-flex justify-content-end mt-3">
+                        <a href="index.html" class="btn btn-light btn-batal">Batal</a>
+                        <button class="btn btn-info btn-submit" data-toggle="modal" data-target="#modal-otp">Lanjutkan
+                            Pembayaran</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- desktop version -->
+
+        <!-- modal otp -->
+        <div class="modal fade" id="modal-otp" tabindex="-1" role="dialog" aria-labelledby="modal-otp"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+                <div class="modal-content" style="border-radius: 16px !important;">
+                    <div class="modal-header justify-content-start">
+                        <button type="button" class="close pr-2 pl-0 ml-0" data-dismiss="modal" aria-label="Close">
+                            <img src="assets/img/ic-close.svg">
+                        </button>
+                        <h5 class="modal-title ml-3">Kode Verifikasi</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">Masukkan kode verifikasi yang telah dikirim melalui sms ke nomor <span
+                                class="no-hp" style="color: #4db8c4; font-weight: 600;">081234567890</span></p>
+                        <!-- form otp -->
+                        <form id="form-otp" method="POST" name="form_otp">
+                            <div class="row justify-content-center">
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp1" onfocus="onFocusEvent(1)" id="otp1" maxlength="1"
+                                        placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp2" onfocus="onFocusEvent(2)" id="otp2" maxlength="1"
+                                        placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp3" onfocus="onFocusEvent(3)" id="otp3" maxlength="1"
+                                        placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp4" onfocus="onFocusEvent(4)" id="otp4" maxlength="1"
+                                        placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp5" onfocus="onFocusEvent(5)" id="otp5" maxlength="1"
+                                        placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp6" onfocus="onFocusEvent(6)" id="otp6" maxlength="1"
+                                        placeholder="1" required autocomplete="off">
+                                </div>
+                            </div>
+                        </form>
+                        <!-- end form otp -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal otp -->
+
+        <!-- mobile version -->
+        <div class="container mt-4 mobile">
+            <div class="row m-0 justify-content-between">
+                <h3 class="mb-0 judul" style="font-size: 16px;">Kartu Debit</h3>
+                <img class="mt-n1" src="assets/img/kartu-debit.png" alt="Kartu Debit">
+            </div>
+        </div>
+        <div class="row waktu-bayar justify-content-between mobile">
+            <p class="mb-0">Selesaikan pembayaran dalam waktu</p>
+            <!-- countdown timer -->
+            <div class="timer"><span class="remainingTime">24 : 00 : 00</span></div>
+        </div>
+
+        <!-- mobile version -->
+        <section id="mobile-ver" class="container container-data" style="padding-bottom: 72px;">
+            <h3 class="judul mb-2">Kurban Berkah Bersama Narobil</h3>
+            <div class="row mx-0 mb-4 justify-content-between align-items-center">
+                <h6 class="sub-judul m-0 d-flex">Organisasi <span
+                        class="d-inline-block ml-1 text-truncate organisasi">Lorem
+                        ipsum
+                        dolor, sit
+                        amet consectetur adipisicing elit. Praesentium aliquid, quas debitis laboriosam deserunt et eum
+                        cum ullam
+                        quidem optio deleniti velit repudiandae quos molestiae laborum vel cupiditate aut
+                        ducimus.</span></h6>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">Nama</p>
+                <p class="m-0" style="color: #333;">AHMAD RIDWAN</p>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">BANK</p>
+                <p class="m-0" style="color: #333;">MANDIRI</p>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">NO. REKENING</p>
+                <p class="m-0" style="color: #333;">008123456789012</p>
+            </div>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">ID BAYAR</p>
+                <p class="m-0" style="color: #333;">897087082258969616</p>
+            </div>
+            <hr>
+            <div class="row mx-0 justify-content-between mb-2">
+                <p class="m-0 text-uppercase">TAGIHAN</p>
+                <p class="m-0" style="color: #333;">Rp 12.000.000</p>
+            </div>
+            <div class="row mx-0 justify-content-between">
+                <p class="m-0 text-uppercase">Biaya Admin</p>
+                <p class="m-0" style="color: #333;">Rp 3.500</p>
+            </div>
+            <hr class="dotted">
+            <div class="row m-0 justify-content-between">
+                <p class="text-uppercase m-0">Total Pembayaran</p>
+                <p class="m-0" style="color: #333; font-weight: 600;">Rp 12.003.500</p>
+            </div>
+            <div class="box-btn">
+                <button class="btn btn-info btn-submit" data-toggle="modal" data-target="#modal-otp2">Lanjutkan
+                    Pembayaran</button>
+            </div>
+        </section>
+
+        <!-- modal otp -->
+        <div class="modal fade" id="modal-otp2" tabindex="-1" role="dialog" aria-labelledby="modal-otp2"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-start">
+                        <button type="button" class="close pr-2 pl-0 ml-0" data-dismiss="modal" aria-label="Close">
+                            <img src="assets/img/ic-close.svg">
+                        </button>
+                        <h5 class="modal-title ml-3">Kode Verifikasi</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">Masukkan kode verifikasi yang telah dikirim melalui sms ke nomor <span
+                                class="no-hp" style="color: #4db8c4; font-weight: 600;">081234567890</span></p>
+                        <!-- form otp -->
+                        <form id="form-otp2" method="POST" name="form_otp2">
+                            <div class="row justify-content-center">
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp1" onfocus="onFocusEvent(1)" id="otpm1"
+                                        maxlength="1" placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp2" onfocus="onFocusEvent(2)" id="otpm2"
+                                        maxlength="1" placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp3" onfocus="onFocusEvent(3)" id="otpm3"
+                                        maxlength="1" placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp4" onfocus="onFocusEvent(4)" id="otpm4"
+                                        maxlength="1" placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp5" onfocus="onFocusEvent(5)" id="otpm5"
+                                        maxlength="1" placeholder="1" required autocomplete="off">
+                                </div>
+                                <div class="input-box mr-2">
+                                    <input type="tel" class="otp otp6" onfocus="onFocusEvent(6)" id="otpm6"
+                                        maxlength="1" placeholder="1" required autocomplete="off">
+                                </div>
+                            </div>
+                        </form>
+                        <!-- end form otp -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal otp -->
+
+        <!-- mobile version -->
+    </main>
+    <!--end main content -->
+
+    <!-- footer -->
+    <footer id="footer" style="display: none;" class="position-relative mt-4">
+        <div class="container">
+            <div class="row m-0 justify-content-between">
+                <p class="mb-0">Copyright © 2020</p>
+                <p class="mb-0">PT Jatelindo Perkasa Abadi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Clipboard -->
+    <script src="plugins/clipboard/js/clipboard.min.js"></script>
+    <script src="assets/js/bayar.js"></script>
+
+</body>
+
+</html>

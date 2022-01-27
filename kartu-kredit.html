@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="mobile/css/m-style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="plugins/font-awesome/css/fontawesome.min.css">
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/img/icon.png">
+
+    <title>Narobil</title>
+</head>
+
+<!-- loading -->
+<div id="loader" class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+
+<body class="kartu-kredit" onload="loading()">
+
+    <!-- main content -->
+    <main id="content" class="wrapper" style="display: none;">
+        <!-- navbar desktop -->
+        <nav id="nav-desktop-ver" class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="metode-pembayaran.html"><img src="assets/img/logo-nav.png"
+                        alt="Narobile"></a>
+            </div>
+        </nav>
+        <!-- navbar mobile -->
+        <nav id="nav-mobile-ver" class="navbar">
+            <a class="navbar-brand" href="metode-pembayaran.html"><img src="assets/img/logo-nav.png" alt="Narobil"
+                    height="32px"></a>
+        </nav>
+        <!-- end navbar -->
+
+        <!-- desktop version -->
+        <section id="desktop-ver" class="container mt-4">
+            <div class="row m-0 justify-content-between">
+                <!-- card kiri -->
+                <div class="card card-1">
+                    <div class="card-body">
+                        <h3 class="judul">Kurban Berkah Bersama Narobil</h3>
+                        <h6 class="sub-judul">Organisasi <span>Baznas</span></h6>
+                        <hr class="my-4">
+                        <div class="row m-0 justify-content-between">
+                            <p class="text-uppercase mb-0">Tagihan</p>
+                            <p class="total-pembayaran mb-0" style="color: #333;">Rp 12.000.000</p>
+                        </div>
+                        <hr>
+                        <div class="row m-0 justify-content-between">
+                            <p class="text-uppercase mb-0">Biaya Admin</p>
+                            <p class="total-pembayaran mb-0" style="color: #333;">Rp 3.500</p>
+                        </div>
+                        <hr class="dotted">
+                        <div class="row m-0 justify-content-between">
+                            <p class="text-uppercase mb-0">Total Pembayaran</p>
+                            <p class="total-pembayaran mb-0">Rp 12.003.500</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card kiri -->
+                <!-- card kanan -->
+                <div class="card card-2">
+                    <div class="card-header">
+                        <div class="row m-0 justify-content-between">
+                            <h3 class="judul">Kartu Kredit</h3>
+                            <span>
+                                <img class="mr-1" src="assets/img/visa.png" alt="Visa">
+                                <img class="mr-1" src="assets/img/master-card.png" alt="Master Card">
+                                <img src="assets/img/jcb.png" alt="JCB">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form id="upload" class="needs-validation" action="" method="POST" novalidate>
+                            <div class="form-group">
+                                <label for="inputNama">Nama Pemilik Kartu</label>
+                                <input type="text" class="form-control" id="inputNama" placeholder="Masukkan Nama"
+                                    aria-describedby="inputNama" required>
+                                <div class="invalid-feedback error-msg">
+                                    Nama Pemilik Kartu tidak boleh kosong.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Nomor Kartu Kredit</label>
+                                <input type="tel" class="form-control inputNoKartu" placeholder="Masukkan Nomor"
+                                    aria-describedby="inputNoKartu" required>
+                                <div class="invalid-feedback error-msg">
+                                    Nomor Kartu Kredit tidak boleh kosong.
+                                </div>
+                            </div>
+                            <div class="row m-0">
+                                <div class="form-group bulan">
+                                    <label>Kadaluarsa</label>
+                                    <input type="tel" class="form-control inputExp" placeholder="Bulan" maxlength="2"
+                                        aria-describedby="inputExp" required>
+                                    <div class="invalid-feedback error-msg">
+                                        Bulan tidak boleh kosong.
+                                    </div>
+                                </div>
+                                <div class="form-group tahun">
+                                    <label></label>
+                                    <input type="tel" class="form-control inputExp2" placeholder="Tahun" maxlength="2"
+                                        aria-describedby="inputExp2" required>
+                                    <div class="invalid-feedback error-msg">
+                                        Tahun tidak boleh kosong.
+                                    </div>
+                                </div>
+                                <div class="form-group cvv">
+                                    <label>CVV</label>
+                                    <input type="tel" class="form-control inputCVV" placeholder="3 Angka"
+                                        aria-describedby="inputCVV" maxlength="3" required>
+                                    <div class="invalid-feedback error-msg">
+                                        CVV tidak boleh kosong.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <a href="index.html" class="btn btn-light btn-batal">Batal</a>
+                                <button type="submit" class="btn btn-info btn-submit">Bayar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <hr class="line-footer">
+                </div>
+                <!-- end card kanan -->
+            </div>
+            </div>
+        </section>
+        <!-- desktop version -->
+
+        <!-- mobile version -->
+        <section id="mobile-ver" class="container container-data mt-3">
+            <h3 class="judul mb-2">Kurban Berkah Bersama Narobil</h3>
+            <div class="row m-0 justify-content-between align-items-center">
+                <h6 class="sub-judul m-0 d-flex">Organisasi <span
+                        class="d-inline-block ml-1 text-truncate organisasi">Lorem
+                        ipsum
+                        dolor, sit
+                        amet consectetur adipisicing elit. Praesentium aliquid, quas debitis laboriosam deserunt et eum
+                        cum ullam
+                        quidem optio deleniti velit repudiandae quos molestiae laborum vel cupiditate aut
+                        ducimus.</span></h6>
+                <a href="#" data-toggle="modal" data-target="#modal-detail">Lihat detail</a>
+            </div>
+            <hr>
+            <div class="row m-0 justify-content-between">
+                <h6 class="text-uppercase m-0" style="font-size: 13px;">Total Pembayaran</h6>
+                <p class="m-0" style="font-weight: 600;">Rp 12.003.500</p>
+            </div>
+            <div class="row min-vw-100">
+                <hr class="w-100 mt-3 mb-0" style="border-top: 10px solid #e8e8e8;">
+            </div>
+            <div class="row justify-content-between" style="margin: 20px 0;">
+                <h3 class="mb-0 judul" style="font-size: 16px; margin-top: 3px;">Kartu Kredit</h3>
+                <span>
+                    <img class="mr-1" src="assets/img/visa.png" alt="Visa">
+                    <img class="mr-1" src="assets/img/master-card.png" alt="Master Card">
+                    <img src="assets/img/jcb.png" alt="JCB">
+                </span>
+            </div>
+            <div class="row min-vw-100">
+                <hr class="w-100 mt-0 mb-3">
+            </div>
+            <form id="upload" class="needs-validation" action="" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="inputNama">Nama Pemilik Kartu</label>
+                    <input type="text" class="form-control" id="inputNama" placeholder="Masukkan Nama"
+                        aria-describedby="inputNama" required>
+                    <div class="invalid-feedback error-msg">
+                        Nama Pemilik Kartu tidak boleh kosong.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Nomor Kartu Kredit</label>
+                    <input type="tel" class="form-control inputNoKartu" placeholder="Masukkan Nomor"
+                        aria-describedby="inputNoKartu" required>
+                    <div class="invalid-feedback error-msg">
+                        Nomor Kartu Kredit tidak boleh kosong.
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="form-group bulan">
+                        <label>Kadaluarsa</label>
+                        <input type="tel" class="form-control inputExp" placeholder="Bulan" maxlength="2"
+                            aria-describedby="inputExp" required>
+                        <div class="invalid-feedback error-msg">
+                            Bulan tidak boleh kosong.
+                        </div>
+                    </div>
+                    <div class="form-group tahun">
+                        <label></label>
+                        <input type="tel" class="form-control inputExp2" placeholder="Tahun" maxlength="2"
+                            aria-describedby="inputExp2" required>
+                        <div class="invalid-feedback error-msg">
+                            Tahun tidak boleh kosong.
+                        </div>
+                    </div>
+                    <div class="form-group cvv">
+                        <label>CVV</label>
+                        <input type="tel" class="form-control inputCVV" placeholder="3 Angka"
+                            aria-describedby="inputCVV" maxlength="3" required>
+                        <div class="invalid-feedback error-msg">
+                            CVV tidak boleh kosong.
+                        </div>
+                    </div>
+                </div>
+                <div class="box-btn">
+                    <button type="submit" class="btn btn-info btn-submit">Lanjutkan</button>
+                </div>
+            </form>
+            </div>
+
+            <!-- modal detail pembayaran -->
+            <div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="modal-detail"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header justify-content-start">
+                            <button type="button" class="close pr-2 pl-0 ml-0" data-dismiss="modal" aria-label="Close">
+                                <img src="assets/img/ic-close.svg">
+                            </button>
+                            <h5 class="modal-title ml-3">Detail Tagihan</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row m-0 justify-content-between mb-2">
+                                <p class="m-0 text-uppercase">Tagihan</p>
+                                <p class="m-0">Rp 12.000.000</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between">
+                                <p class="m-0 text-uppercase">Biaya Admin</p>
+                                <p class="m-0">Rp 3.500</p>
+                            </div>
+                            <hr class="dotted">
+                            <div class="row m-0 justify-content-between">
+                                <p class="m-0 text-uppercase">Total Pembayaran</p>
+                                <p class="m-0">Rp 12.003.500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal detail pembayaran -->
+        </section>
+        <!-- mobile version -->
+
+    </main>
+    <!--end main content -->
+
+    <!-- footer -->
+    <footer id="footer" style="display: none;">
+        <div class="container">
+            <div class="row m-0 justify-content-between">
+                <p class="mb-0">Copyright © 2020</p>
+                <p class="mb-0">PT Jatelindo Perkasa Abadi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/kk.js"></script>
+    <!-- ddslick -->
+    <script src="plugins/ddslick/js/jquery.ddslick.min.js"></script>
+    <script>
+        // scroll to bottom
+        $("#modal-detail").on("show.bs.modal", function () {
+            $('.modal').animate({ scrollTop: $(document).height() }, 1000);
+            $(".modal").css("overflow", "hidden")
+        })
+    </script>
+</body>
+
+</html>

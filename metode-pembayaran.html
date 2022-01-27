@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="mobile/css/m-style.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="plugins/font-awesome/css/fontawesome.min.css" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/img/icon.png" />
+
+    <title>Narobil</title>
+</head>
+
+<!-- loading -->
+<div id="loader" class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+
+<body onload="loading()">
+    <!-- main content -->
+    <main id="content" class="wrapper" style="display: none">
+        <!-- navbar desktop -->
+        <nav id="nav-desktop-ver" class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo-nav.png" alt="Narobil" /></a>
+            </div>
+        </nav>
+        <!-- navbar mobile -->
+        <nav id="nav-mobile-ver" class="navbar">
+            <a class="navbar-brand" href="#"><img src="assets/img/logo-nav.png" alt="Narobil" height="32px" /></a>
+        </nav>
+        <!-- end navbar -->
+
+        <!-- desktop version -->
+        <section id="desktop-ver" class="container mt-4">
+            <div class="row m-0 justify-content-between">
+                <!-- card kiri -->
+                <div class="card card-1">
+                    <div class="card-body">
+                        <h3 class="judul">Kurban Berkah Bersama Narobil</h3>
+                        <h6 class="sub-judul">
+                            Organisasi <span>Baznas</span>
+                        </h6>
+                        <hr class="my-4" />
+                        <div class="row m-0 justify-content-between">
+                            <p class="text-uppercase mb-0">Tagihan</p>
+                            <p class="total-pembayaran mb-0" style="color: #333">
+                                Rp 12.000.000
+                            </p>
+                        </div>
+                        <hr />
+                        <div class="row m-0 justify-content-between">
+                            <p class="text-uppercase mb-0">Biaya Admin</p>
+                            <p class="total-pembayaran mb-0" style="color: #333">
+                                Rp 3.500
+                            </p>
+                        </div>
+                        <hr class="dotted" />
+                        <div class="row m-0 justify-content-between">
+                            <p class="text-uppercase mb-0">
+                                Total Pembayaran
+                            </p>
+                            <p class="total-pembayaran mb-0">
+                                Rp 12.003.500
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card kiri -->
+                <!-- card kanan -->
+                <div class="card card-2">
+                    <div class="card-header">
+                        <h3 class="judul">Metode Pembayaran</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card card-pembayaran">
+                            <a href="#" class="stretched-link bt-submit"></a>
+                            <div class="row m-0 justify-content-between">
+                                <p class="mb-0">Kartu Debit</p>
+                                <span>
+                                    <img class="mr-4" src="assets/img/kartu-debit.png" alt="Kartu Debit" />
+                                    <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                                </span>
+                            </div>
+                            <!-- form kartu debit -->
+                            <form id="kartu-debit-form" name="kartu_debit_form" action="/payment/transactionInquiry"
+                                method="POST" modelAttribute="transactionInquiry">
+                                <input type="hidden" name="name" value="${name}" class="form-control validate">
+                                <input type="hidden" name="email" value="${email}" class="form-control validate">
+                                <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                                <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                                <input type="hidden" name="description" value="${description}"
+                                    class="form-control validate">
+                                <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                                <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                                <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                                    <c:if test="${not empty paymentChannel.id}">
+                                        <c:if test="${paymentChannel.id eq 2}">
+                                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                                class="form-control validate">
+                                        </c:if>
+                                    </c:if>
+                                </c:forEach> -->
+                            </form>
+                            <!-- form kartu debit -->
+                        </div>
+                        <div class="card card-pembayaran">
+                            <a href="#" class="stretched-link bt-submit"></a>
+                            <div class="row m-0 justify-content-between">
+                                <p class="mb-0">Kartu Kredit</p>
+                                <span>
+                                    <img class="mr-1" src="assets/img/visa.png" alt="Visa" />
+                                    <img class="mr-1" src="assets/img/master-card.png" alt="Master Card" />
+                                    <img class="mr-4" src="assets/img/jcb.png" alt="JCB" />
+                                    <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                                </span>
+                            </div>
+                            <!-- form kartu kredit -->
+                            <form id="kartu-kredit-form" name="kartu_kredit_form" action="/payment/transactionInquiry2"
+                                method="POST" modelAttribute="transactionInquiry">
+                                <input type="hidden" name="name" value="${name}" class="form-control validate">
+                                <input type="hidden" name="email" value="${email}" class="form-control validate">
+                                <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                                <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                                <input type="hidden" name="description" value="${description}"
+                                    class="form-control validate">
+                                <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                                <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                                <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                                    <c:if test="${not empty paymentChannel.id}">
+                                        <c:if test="${paymentChannel.id eq 2}">
+                                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                                class="form-control validate">
+                                        </c:if>
+                                    </c:if>
+                                </c:forEach> -->
+                            </form>
+                            <!-- form kartu kredit -->
+                        </div>
+                        <div class="card card-pembayaran">
+                            <a href="#" class="stretched-link bt-submit"></a>
+                            <div class="row m-0 justify-content-between">
+                                <p class="mb-0">Transfer Bank</p>
+                                <span>
+                                    <img class="mr-4" src="assets/img/bank-transfer.png" alt="Bank Transfer" />
+                                    <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                                </span>
+                            </div>
+                            <!-- form transfer bank -->
+                            <form id="transfer-bank-form" name="transfer_bank_form"
+                                action="/payment/transactionInquiry3" method="POST" modelAttribute="transactionInquiry">
+                                <input type="hidden" name="name" value="${name}" class="form-control validate">
+                                <input type="hidden" name="email" value="${email}" class="form-control validate">
+                                <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                                <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                                <input type="hidden" name="description" value="${description}"
+                                    class="form-control validate">
+                                <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                                <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                                <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                                    <c:if test="${not empty paymentChannel.id}">
+                                        <c:if test="${paymentChannel.id eq 2}">
+                                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                                class="form-control validate">
+                                        </c:if>
+                                    </c:if>
+                                </c:forEach> -->
+                            </form>
+                            <!-- form transfer bank -->
+                        </div>
+                        <div class="card card-pembayaran">
+                            <a href="#" class="stretched-link bt-submit"></a>
+                            <div class="row m-0 justify-content-between">
+                                <p class="mb-0">Gerai Retail</p>
+                                <span>
+                                    <img class="mr-4" src="assets/img/alfa-indo.png" alt="Alfamart Indomaret" />
+                                    <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                                </span>
+                            </div>
+                            <!-- form gerai retail -->
+                            <form id="gerai-retail-form" name="gerai_retail_form" action="/payment/transactionInquiry4"
+                                method="POST" modelAttribute="transactionInquiry">
+                                <input type="hidden" name="name" value="${name}" class="form-control validate">
+                                <input type="hidden" name="email" value="${email}" class="form-control validate">
+                                <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                                <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                                <input type="hidden" name="description" value="${description}"
+                                    class="form-control validate">
+                                <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                                <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                                <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                                    <c:if test="${not empty paymentChannel.id}">
+                                        <c:if test="${paymentChannel.id eq 2}">
+                                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                                class="form-control validate">
+                                        </c:if>
+                                    </c:if>
+                                </c:forEach> -->
+                            </form>
+                            <!-- form gerai retail -->
+                        </div>
+                        <div class="card card-pembayaran">
+                            <a href="#" class="stretched-link bt-submit"></a>
+                            <div class="row m-0 justify-content-between">
+                                <p class="mb-0">Pembayaran QRIS</p>
+                                <span>
+                                    <img class="mr-4" src="assets/img/qris.png" alt="QRIS" />
+                                    <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                                </span>
+                            </div>
+                            <!-- form qris -->
+                            <form id="qris-form" name="qris_form" action="/payment/transactionInquiry5" method="POST"
+                                modelAttribute="transactionInquiry">
+                                <input type="hidden" name="name" value="${name}" class="form-control validate">
+                                <input type="hidden" name="email" value="${email}" class="form-control validate">
+                                <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                                <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                                <input type="hidden" name="description" value="${description}"
+                                    class="form-control validate">
+                                <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                                <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                                <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                                    <c:if test="${not empty paymentChannel.id}">
+                                        <c:if test="${paymentChannel.id eq 2}">
+                                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                                class="form-control validate">
+                                        </c:if>
+                                    </c:if>
+                                </c:forEach> -->
+                            </form>
+                            <!-- form qris -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end card kanan -->
+            </div>
+        </section>
+        <!-- desktop version -->
+
+        <!-- mobile version -->
+        <section id="mobile-ver" class="container container-data mt-3">
+            <h3 class="judul mb-2">Kurban Berkah Bersama Narobil</h3>
+            <div class="row m-0 justify-content-between align-items-center">
+                <h6 class="sub-judul m-0 d-flex">
+                    Organisasi
+                    <span class="d-inline-block ml-1 text-truncate organisasi">Lorem ipsum dolor, sit amet consectetur
+                        adipisicing
+                        elit. Praesentium aliquid, quas debitis laboriosam
+                        deserunt et eum cum ullam quidem optio deleniti
+                        velit repudiandae quos molestiae laborum vel
+                        cupiditate aut ducimus.</span>
+                </h6>
+                <a href="#" data-toggle="modal" data-target="#modal-detail">Lihat detail</a>
+            </div>
+            <hr />
+            <div class="row m-0 justify-content-between">
+                <h6 class="text-uppercase m-0" style="font-size: 13px">
+                    Total Pembayaran
+                </h6>
+                <p class="m-0" style="font-weight: 600">Rp 12.003.500</p>
+            </div>
+            <div class="row min-vw-100">
+                <hr class="w-100 my-3" style="border-top: 10px solid #e8e8e8" />
+            </div>
+            <h6 class="mb-3" style="font-size: 16px; color: #333">
+                Metode Pembayaran
+            </h6>
+            <div class="card card-pembayaran">
+                <a href="#" class="stretched-link bt-submit"></a>
+                <div class="row m-0 justify-content-between">
+                    <p class="mb-0">Kartu Debit</p>
+                    <span>
+                        <img class="mr-2" src="assets/img/kartu-debit.png" alt="Kartu Debit" />
+                        <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                    </span>
+                </div>
+                <!-- form kartu debit -->
+                <form id="kartu-debit-form2" name="kartu_debit_form2" action="/payment/transactionInquiry" method="POST"
+                    modelAttribute="transactionInquiry">
+                    <input type="hidden" name="name" value="${name}" class="form-control validate">
+                    <input type="hidden" name="email" value="${email}" class="form-control validate">
+                    <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                    <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                    <input type="hidden" name="description" value="${description}" class="form-control validate">
+                    <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                    <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                    <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                                    <c:if test="${not empty paymentChannel.id}">
+                                        <c:if test="${paymentChannel.id eq 2}">
+                                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                                class="form-control validate">
+                                        </c:if>
+                                    </c:if>
+                                </c:forEach> -->
+                </form>
+                <!-- form kartu debit -->
+            </div>
+            <div class="card card-pembayaran">
+                <a href="#" class="stretched-link bt-submit"></a>
+                <div class="row m-0 justify-content-between">
+                    <p class="mb-0">Kartu Kredit</p>
+                    <span>
+                        <img class="mr-1" src="assets/img/visa.png" alt="Visa" />
+                        <img class="mr-1" src="assets/img/master-card.png" alt="Master Card" />
+                        <img class="mr-2" src="assets/img/jcb.png" alt="JCB" />
+                        <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                    </span>
+                </div>
+                <!-- form kartu kredit -->
+                <form id="kartu-kredit-form2" name="kartu_kredit_form2" action="/payment/transactionInquiry2"
+                    method="POST" modelAttribute="transactionInquiry">
+                    <input type="hidden" name="name" value="${name}" class="form-control validate">
+                    <input type="hidden" name="email" value="${email}" class="form-control validate">
+                    <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                    <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                    <input type="hidden" name="description" value="${description}" class="form-control validate">
+                    <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                    <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                    <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                    <c:if test="${not empty paymentChannel.id}">
+                        <c:if test="${paymentChannel.id eq 2}">
+                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                class="form-control validate">
+                        </c:if>
+                    </c:if>
+                </c:forEach> -->
+                </form>
+                <!-- form kartu kredit -->
+            </div>
+            <div class="card card-pembayaran">
+                <a href="#" class="stretched-link bt-submit"></a>
+                <div class="row m-0 justify-content-between">
+                    <p class="mb-0">Transfer Bank</p>
+                    <span>
+                        <img class="mr-2" src="assets/img/bank-transfer.png" alt="Bank Transfer" />
+                        <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                    </span>
+                </div>
+                <!-- form transfer bank -->
+                <form id="transfer-bank-form2" name="transfer_bank_form2" action="/payment/transactionInquiry3"
+                    method="POST" modelAttribute="transactionInquiry">
+                    <input type="hidden" name="name" value="${name}" class="form-control validate">
+                    <input type="hidden" name="email" value="${email}" class="form-control validate">
+                    <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                    <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                    <input type="hidden" name="description" value="${description}" class="form-control validate">
+                    <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                    <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                    <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                    <c:if test="${not empty paymentChannel.id}">
+                        <c:if test="${paymentChannel.id eq 2}">
+                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                class="form-control validate">
+                        </c:if>
+                    </c:if>
+                </c:forEach> -->
+                </form>
+                <!-- form transfer bank -->
+            </div>
+            <div class="card card-pembayaran">
+                <a href="#" class="stretched-link bt-submit"></a>
+                <div class="row m-0 justify-content-between">
+                    <p class="mb-0">Gerai Retail</p>
+                    <span>
+                        <img class="mr-2" src="assets/img/alfa-indo.png" alt="Alfamart Indomaret" />
+                        <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                    </span>
+                </div>
+                <!-- form gerai retail -->
+                <form id="gerai-retail-form2" name="gerai_retail_form2" action="/payment/transactionInquiry4"
+                    method="POST" modelAttribute="transactionInquiry">
+                    <input type="hidden" name="name" value="${name}" class="form-control validate">
+                    <input type="hidden" name="email" value="${email}" class="form-control validate">
+                    <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                    <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                    <input type="hidden" name="description" value="${description}" class="form-control validate">
+                    <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                    <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                    <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                    <c:if test="${not empty paymentChannel.id}">
+                        <c:if test="${paymentChannel.id eq 2}">
+                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                class="form-control validate">
+                        </c:if>
+                    </c:if>
+                </c:forEach> -->
+                </form>
+                <!-- form gerai retail -->
+            </div>
+            <div class="card card-pembayaran">
+                <a href="#" class="stretched-link bt-submit"></a>
+                <div class="row m-0 justify-content-between">
+                    <p class="mb-0">Pembayaran QRIS</p>
+                    <span>
+                        <img class="mr-2" src="assets/img/qris.png" alt="QRIS" />
+                        <img src="assets/img/ic_arrow_right.png" alt="Arrow Right" />
+                    </span>
+                </div>
+                <!-- form qris -->
+                <form id="qris-form2" name="qris_form2" action="/payment/transactionInquiry5" method="POST"
+                    modelAttribute="transactionInquiry">
+                    <input type="hidden" name="name" value="${name}" class="form-control validate">
+                    <input type="hidden" name="email" value="${email}" class="form-control validate">
+                    <input type="hidden" name="msisdn" value="${msisdn}" class="form-control validate">
+                    <input type="hidden" name="ticketID" value="${ticketID}" class="form-control validate">
+                    <input type="hidden" name="description" value="${description}" class="form-control validate">
+                    <input type="hidden" name="amount" value="${amount}" class="form-control validate">
+                    <input type="hidden" name="paymentChannel" value="2" class="form-control validate">
+                    <!-- <c:forEach var="paymentChannel" items="${paymentChannel.paymentChannel}">
+                    <c:if test="${not empty paymentChannel.id}">
+                        <c:if test="${paymentChannel.id eq 2}">
+                            <input type="hidden" name="bt-channel" id="bt-channel" value="yes"
+                                class="form-control validate">
+                        </c:if>
+                    </c:if>
+                </c:forEach> -->
+                </form>
+                <!-- form qris -->
+            </div>
+
+            <!-- modal detail pembayaran -->
+            <div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="modal-detail"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header justify-content-start">
+                            <button type="button" class="close pr-2 pl-0 ml-0" data-dismiss="modal" aria-label="Close">
+                                <img src="assets/img/ic-close.svg" />
+                            </button>
+                            <h5 class="modal-title ml-3">Detail Tagihan</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row m-0 justify-content-between mb-2">
+                                <p class="m-0 text-uppercase">Tagihan</p>
+                                <p class="m-0">Rp 12.000.000</p>
+                            </div>
+                            <div class="row mx-0 justify-content-between">
+                                <p class="m-0 text-uppercase">
+                                    Biaya Admin
+                                </p>
+                                <p class="m-0">Rp 3.500</p>
+                            </div>
+                            <hr class="dotted" />
+                            <div class="row m-0 justify-content-between">
+                                <p class="m-0 text-uppercase">
+                                    Total Pembayaran
+                                </p>
+                                <p class="m-0">Rp 12.003.500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal detail pembayaran -->
+        </section>
+        <!-- end mobile version -->
+    </main>
+    <!-- end main content -->
+
+    <!-- footer -->
+    <footer id="footer" style="display: none">
+        <div class="container">
+            <div class="row m-0 justify-content-between">
+                <p class="mb-0">Copyright © 2020</p>
+                <p class="mb-0">PT Jatelindo Perkasa Abadi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // hide footer
+        setTimeout(function () {
+            if (width <= 1024) {
+                $('#footer').hide();
+            } else {
+                $('#footer').show();
+            }
+        }, 550);
+        // scroll to bottom
+        $('#modal-detail').on('show.bs.modal', function () {
+            $('.modal').animate({ scrollTop: $(document).height() }, 1000);
+            $('.modal').css('overflow', 'hidden');
+        });
+    </script>
+</body>
+
+</html>
